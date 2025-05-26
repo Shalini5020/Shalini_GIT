@@ -1,0 +1,26 @@
+class secondLargestElement {
+    public static void main(String[] args) {
+        int [] arr = {11,24,36,14,15};
+        int max1 = arr[0];
+        int max2 = arr[1];
+        if(arr[1] > arr[0]){
+              max1 = arr[1];
+              max2 = arr[0];
+        }
+        else{
+            max1 = arr[0];
+             max2 = arr[1];
+        }
+        for(int i=2;i<5;i++)
+        {
+            if(arr[i] > max1){
+                max2 = max1;
+                max1 = arr[i];
+            }
+            else if(arr[i] > max2){
+                max2 = arr[i];
+            }
+        }
+         System.out.print("Second Largest Element = " +max2);
+    }
+}
